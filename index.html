@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Cleaner - Remove Tracking Parameters | Learn About Islam</title>
+    <meta name="description" content="Clean social media URLs by removing tracking parameters. Learn about authentic Islam following the methodology of the Salaf.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <h1 class="logo">🔗 URL Cleaner</h1>
+                <button id="themeToggle" class="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+            <p class="tagline">Remove tracking parameters from social media URLs</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- URL Cleaner Section -->
+            <section class="url-cleaner-section">
+                <div class="card">
+                    <h2>Clean Your URLs</h2>
+                    <p class="description">
+                        Remove tracking parameters, account suggestions, and unnecessary data from 
+                        Instagram, Facebook, and TikTok URLs while keeping the original content intact.
+                    </p>
+                    
+                    <div class="url-form">
+                        <div class="input-group">
+                            <label for="originalUrl">Paste your URL here:</label>
+                            <textarea 
+                                id="originalUrl" 
+                                placeholder="https://www.instagram.com/p/ABC123/?utm_source=ig_web_copy_link&igshid=..."
+                                rows="3"
+                            ></textarea>
+                        </div>
+                        
+                        <button id="cleanBtn" class="clean-btn">
+                            🧹 Clean URL
+                        </button>
+                        
+                        <div class="output-group" id="outputGroup" style="display: none;">
+                            <label for="cleanedUrl">Cleaned URL:</label>
+                            <textarea 
+                                id="cleanedUrl" 
+                                readonly
+                                rows="2"
+                            ></textarea>
+                            <button id="copyBtn" class="copy-btn">
+                                📋 Copy to Clipboard
+                            </button>
+                        </div>
+                        
+                        <div class="status-message" id="statusMessage"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card Game Section -->
+            <section class="game-section">
+                <div class="card">
+                    <h2>🎴 Islamic Knowledge Quiz</h2>
+                    <p class="game-description">Test your knowledge about Islam with this fun card game!</p>
+                    
+                    <div class="game-container">
+                        <div class="game-stats">
+                            <div class="stat">
+                                <span class="stat-label">Score:</span>
+                                <span id="score" class="stat-value">0</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Card:</span>
+                                <span id="cardCounter" class="stat-value">1/10</span>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-card" id="quizCard">
+                            <div class="card-question">
+                                <h3 id="questionText">Loading...</h3>
+                            </div>
+                            <div class="card-options" id="cardOptions">
+                                <!-- Options will be dynamically added -->
+                            </div>
+                        </div>
+                        
+                        <div class="game-controls">
+                            <button id="startGameBtn" class="game-btn start-btn">🎮 Start Game</button>
+                            <button id="nextCardBtn" class="game-btn next-btn" style="display: none;">Next Card ➡️</button>
+                            <button id="resetGameBtn" class="game-btn reset-btn" style="display: none;">🔄 Play Again</button>
+                        </div>
+                        
+                        <div class="game-result" id="gameResult" style="display: none;">
+                            <h3 id="resultTitle"></h3>
+                            <p id="resultMessage"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Islamic Content Section -->
+            <section class="islamic-section">
+                <div class="card">
+                    <h2>📖 Learn About Islam</h2>
+                    <div class="islamic-content">
+                        <div class="intro-text">
+                            <p class="highlight">
+                                "And whoever seeks a religion other than Islam, it will never be accepted of him, 
+                                and in the Hereafter he will be one of the losers." 
+                                <span class="reference">[Quran 3:85]</span>
+                            </p>
+                        </div>
+
+                        <div class="tawheed-section">
+                            <h3>Tawheed - The Oneness of Allah</h3>
+                            <div class="tawheed-explanation">
+                                <p>The foundation of Islam is <strong>Tawheed</strong> - believing in the absolute Oneness of Allah in three categories:</p>
+                                <div class="tawheed-types">
+                                    <div class="tawheed-type">
+                                        <h4>1. Tawheed ar-Rububiyyah (Lordship)</h4>
+                                        <p>Allah alone is the Creator, Sustainer, and Controller of all existence.</p>
+                                        <p class="evidence">"Indeed, your Lord is Allah, who created the heavens and earth in six days and then established Himself above the Throne, arranging the matter..." <span class="reference">[Quran 7:54]</span></p>
+                                    </div>
+                                    <div class="tawheed-type">
+                                        <h4>2. Tawheed al-Uluhiyyah (Worship)</h4>
+                                        <p>Allah alone deserves all worship and no act of worship should be directed to anyone else.</p>
+                                        <p class="evidence">"And I did not create the jinn and mankind except to worship Me." <span class="reference">[Quran 51:56]</span></p>
+                                    </div>
+                                    <div class="tawheed-type">
+                                        <h4>3. Tawheed al-Asma wa as-Sifat (Names and Attributes)</h4>
+                                        <p>Allah's Names and Attributes are unique to Him and perfect, without resemblance to creation.</p>
+                                        <p class="evidence">"There is nothing like unto Him, and He is the All-Hearer, the All-Seer." <span class="reference">[Quran 42:11]</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pillars-section">
+                            <h3>The Five Pillars of Islam</h3>
+                            <div class="pillars-grid">
+                                <div class="pillar">
+                                    <div class="pillar-icon">🕌</div>
+                                    <h4>1. Shahada (Declaration of Faith)</h4>
+                                    <p><strong>Arabic:</strong> أشهد أن لا إله إلا الله وأشهد أن محمداً رسول الله</p>
+                                    <p><strong>English:</strong> "I bear witness that there is no god worthy of worship except Allah, and I bear witness that Muhammad is the Messenger of Allah."</p>
+                                </div>
+                                <div class="pillar">
+                                    <div class="pillar-icon">🤲</div>
+                                    <h4>2. Salah (Prayer)</h4>
+                                    <p>Five daily prayers: Fajr (dawn), Dhuhr (noon), Asr (afternoon), Maghrib (sunset), and Isha (night).</p>
+                                </div>
+                                <div class="pillar">
+                                    <div class="pillar-icon">💰</div>
+                                    <h4>3. Zakat (Obligatory Charity)</h4>
+                                    <p>2.5% of savings given annually to purify wealth and help the needy (for those who meet the nisab threshold).</p>
+                                </div>
+                                <div class="pillar">
+                                    <div class="pillar-icon">🌙</div>
+                                    <h4>4. Sawm (Fasting in Ramadan)</h4>
+                                    <p>Abstaining from food, drink, and marital relations from dawn to sunset during the month of Ramadan.</p>
+                                </div>
+                                <div class="pillar">
+                                    <div class="pillar-icon">🕋</div>
+                                    <h4>5. Hajj (Pilgrimage)</h4>
+                                    <p>Pilgrimage to Mecca once in a lifetime for those who are physically and financially able.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="belief-section">
+                            <h3>The Six Articles of Faith</h3>
+                            <p class="hadith-evidence">"Faith (Iman) is to believe in Allah, His Angels, His Books, His Messengers, the Last Day, and divine decree (Qadar), both good and bad." <span class="reference">[Sahih Muslim 8]</span></p>
+                            <ul class="belief-list">
+                                <li><strong>1. Belief in Allah:</strong> The One, Unique Creator without partners, sons, or daughters</li>
+                                <li><strong>2. Belief in Angels:</strong> Noble beings created from light who worship Allah and carry out His commands</li>
+                                <li><strong>3. Belief in the Books:</strong> Torah (Tawrat), Psalms (Zabur), Gospel (Injeel), and the Quran (final and preserved)</li>
+                                <li><strong>4. Belief in the Messengers:</strong> From Adam to Muhammad (peace be upon them), with Muhammad ﷺ being the final messenger</li>
+                                <li><strong>5. Belief in the Last Day:</strong> The Day of Resurrection when all will be judged by Allah</li>
+                                <li><strong>6. Belief in Divine Decree:</strong> Allah's complete knowledge and control over all things, good and bad</li>
+                            </ul>
+                        </div>
+
+                        <div class="prophetic-guidance">
+                            <h3>Guidance from Prophet Muhammad ﷺ</h3>
+                            <div class="hadith-collection">
+                                <div class="hadith-card">
+                                    <p class="hadith-text">"The believer is not one who eats his fill while his neighbor goes hungry."</p>
+                                    <span class="hadith-source">[Authenticated by Al-Albani]</span>
+                                </div>
+                                <div class="hadith-card">
+                                    <p class="hadith-text">"Whoever believes in Allah and the Last Day, let him speak good or remain silent."</p>
+                                    <span class="hadith-source">[Sahih Bukhari 6018, Sahih Muslim 47]</span>
+                                </div>
+                                <div class="hadith-card">
+                                    <p class="hadith-text">"The most beloved actions to Allah are those done consistently, even if they are small."</p>
+                                    <span class="hadith-source">[Sahih Bukhari 6464, Sahih Muslim 783]</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="authentic-sources">
+                            <h3>Primary Sources of Islamic Knowledge</h3>
+                            <div class="sources-grid">
+                                <div class="source">
+                                    <h4>📕 The Noble Quran</h4>
+                                    <p>The final revelation from Allah, preserved in its original Arabic form. Memorized by millions and unchanged for over 1400 years.</p>
+                                    <p class="source-note">"Indeed, it is We who sent down the Quran and indeed, We will be its guardian." [Quran 15:9]</p>
+                                </div>
+                                <div class="source">
+                                    <h4>📚 Authentic Sunnah</h4>
+                                    <p>The verified sayings, actions, and approvals of Prophet Muhammad ﷺ, primarily found in Sahih Bukhari and Sahih Muslim.</p>
+                                </div>
+                                <div class="source">
+                                    <h4>👥 Ijma' of the Salaf</h4>
+                                    <p>The consensus of the righteous predecessors (Salaf as-Salih) on matters of religion.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="invitation">
+                            <h3>An Invitation to Islam</h3>
+                            <p class="invitation-text">
+                                Islam is the natural religion that Allah chose for humanity. It provides complete guidance for this life and the hereafter. 
+                                If you're seeking truth and peace, we invite you to learn more about Islam with an open heart.
+                            </p>
+                            <div class="shahada-invitation">
+                                <p><strong>To become Muslim, simply declare:</strong></p>
+                                <p class="shahada">"Ash-hadu an la ilaha illa Allah, wa ash-hadu anna Muhammadan rasulu Allah"</p>
+                                <p class="shahada-translation">"I bear witness that there is no god worthy of worship except Allah, and I bear witness that Muhammad is the Messenger of Allah."</p>
+                            </div>
+                            <p class="dua">
+                                <em>"Our Lord, give us good in this world and good in the next world and save us from the punishment of the Fire."</em>
+                                <span class="reference">[Quran 2:201]</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 URL Cleaner. Made with ❤️ for the Muslim community.</p>
+            <p class="footer-note">
+                <small>Islamic content is based on authentic sources following the methodology of the Salaf as-Salih.</small>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
